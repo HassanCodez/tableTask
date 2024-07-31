@@ -1,4 +1,4 @@
-# live link
+# Live link
 https://table-task-ten.vercel.app/
 
 ## Main Features
