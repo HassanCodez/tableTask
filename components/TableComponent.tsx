@@ -38,12 +38,12 @@ const TableComponent = ({ data }: { data: DataRow[] }) => {
     Object.keys(yearMap).length === 0 && uniqueYears.length === data.length;
 
   return (
-    <Table>
+    <Table className="border">
       <TableHeader>
-        <TableRow>
-          <TableHead>Date</TableHead>
-          <TableHead>First Name</TableHead>
-          <TableHead>Last Name</TableHead>
+        <TableRow className="bg-slate-100 ">
+          <TableHead className="font-bold">Date</TableHead>
+          <TableHead className="font-bold">First Name</TableHead>
+          <TableHead className="font-bold">Last Name</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -60,7 +60,9 @@ const TableComponent = ({ data }: { data: DataRow[] }) => {
             {Object.keys(yearMap).map((year) => (
               <Fragment key={year}>
                 <TableRow>
-                  <TableCell colSpan={3}>{year}</TableCell>
+                  <TableCell colSpan={3} className="font-bold">
+                    {year}
+                  </TableCell>
                 </TableRow>
                 {yearMap[year].map((row, index) => (
                   <TableRow key={index}>
@@ -76,7 +78,9 @@ const TableComponent = ({ data }: { data: DataRow[] }) => {
             {uniqueYears.length > 0 && (
               <>
                 <TableRow>
-                  <TableCell colSpan={3}>Unique Years</TableCell>
+                  <TableCell className="font-bold" colSpan={3}>
+                    Unique Years
+                  </TableCell>
                 </TableRow>
                 {uniqueYears.map((row, index) => (
                   <TableRow key={index}>

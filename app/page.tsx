@@ -12,11 +12,11 @@ export default function Home() {
     setUserData((prevData) => [...prevData, row]);
   };
 
-  const mockData = getMockData(); // Directly get mock data
+  const mockData = getMockData();
   const dataToDisplay = useMockData ? mockData : userData;
 
   return (
-    <div className="grid space-y-10 py-10">
+    <div className="grid space-y-10 py-10 container">
       <div className="flex justify-center items-center">
         <label>
           <input
